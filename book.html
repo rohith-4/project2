@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Travel - Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.pexels.com/photos/671658/pexels-photo-671658.jpeg?auto=compress&cs=tinysrgb&w=600'); 
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        .booking-container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.664);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .booking-container h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .booking-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        .booking-container input,
+        .booking-container select,
+        .booking-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .booking-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .booking-container button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="booking-container">
+        <h1>Mountain Booking Form</h1>
+        <form action="submit-booking.html" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            
+            <label for="mountain">Select Mountain</label>
+            <select id="mountain" name="mountain" required>
+                <option value="">--Choose a mountain--</option>
+                <option value="Everest">Mount Everest</option>
+                <option value="K2">K2</option>
+                <option value="Kilimanjaro">Mount Kilimanjaro</option>
+                <option value="Fuji">Mount Fuji</option>
+                <option value="MontBlanc">Mont Blanc</option>
+            </select>
+            
+            <label for="date">Travel Date</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="participants">Number of Participants</label>
+            <input type="number" id="participants" name="participants" min="1" max="50" placeholder="Enter number of participants" required>
+            
+            <label for="notes">Additional Notes</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Enter any special requests or details"></textarea>
+            
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+</body>
+</html>
